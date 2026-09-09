@@ -130,13 +130,13 @@ copy "%APPDATA%\pyRevit\Extensions\RevitMCP.extension.extension\revit_mcp_server
 The server uses only the Python standard library plus the official **`mcp`** package:
 ```cmd
 py -3.12 -m pip install --upgrade pip
-py -3.12 -m pip install --upgrade "mcp>=1.2.0"
+py -3.12 -m pip install --upgrade "mcp>=1.2.0,<2"
 ```
 Find the exact python.exe path (you'll need it for the config):
 ```cmd
 py -3.12 -c "import sys; print(sys.executable)"
 ```
-(macOS: `python3 -m pip install --upgrade "mcp>=1.2.0"` and `which python3`.)
+(macOS: `python3 -m pip install --upgrade "mcp>=1.2.0,<2"` and `which python3`.)
 
 ## B4. Self‑test the bridge (proves it reaches Revit — no Claude needed)
 
@@ -230,7 +230,7 @@ You should get the Revit version + open document. Try also: *"get the Revit proj
 
 :: 2) Python deps
 py -3.12 -m pip install --upgrade pip
-py -3.12 -m pip install --upgrade "mcp>=1.2.0"
+py -3.12 -m pip install --upgrade "mcp>=1.2.0,<2"
 py -3.12 -c "import sys; print(sys.executable)"
 
 :: 3) copy the server file somewhere stable
